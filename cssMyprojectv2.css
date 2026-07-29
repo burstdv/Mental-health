@@ -1,0 +1,10 @@
+.bluediv {
+  background-color: lightblue;
+  width: 100%;
+  block-size: 115px;
+}
+body {
+  background-image: url("https://picsum.photos/id/15/1600/900");
+  height: auto;
+  background-size: 120%;
+}
