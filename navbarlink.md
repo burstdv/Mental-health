@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <div class="bluediv">
+  <h1>About Me</h1>
+  <p>By, Naser Al sabah</p>
+</div>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="news.html">News</a></li>
+</ul>
+
+<h2>About Me Page</h2>
+<p>This is where you write about yourself.</p>
+
+</body>
+</html>
