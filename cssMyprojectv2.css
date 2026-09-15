@@ -1,26 +1,30 @@
 .bluediv {
-  background-color: lightblue;
+  background-color: rgba(121, 203, 210, 0.761);
   width: 100%;
   block-size: 115px;
 }
 
 body {
-  background-image: url("https://picsum.photos/id/15/1600/900");
+  background-image: url("https://images.pexels.com/photos/13248795/pexels-photo-13248795.jpeg");
   height: auto;
   background-size: 120%;
-  margin: 0;
-  padding: 0;
 }
 
 .dropbtn {
-  background-color: #04AA6D;
+  background-color: #f18e04;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
 }
 
-h2, p {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+p {
   margin: 10px;
 }
 
@@ -29,14 +33,15 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #38444d;
+  background-color: #ff840045;
 }
 
 li {
   float: left;
 }
 
-li a, .dropbtn {
+li a,
+.dropbtn {
   display: inline-block;
   color: white;
   text-align: center;
@@ -44,7 +49,8 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+li a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
 
@@ -57,7 +63,7 @@ li.dropdown {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -75,4 +81,14 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+ #map { height: 350px; width: 35%; }
+
+ .box-demo {
+  background-color: lightgrey;
+  width: 250px;
+  border: 10px solid green;
+  padding: 25px;
+  margin: 30px;
+  margin-left: 650px;
 }
