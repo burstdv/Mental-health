@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- this links my css and html and the Leaflet library css and java script -->
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -12,14 +13,14 @@
 </head>
 
 <body>
-
+    <!-- this is the website heading and subheading -->
     <div class="bluediv">
         <h1>Mental health with Nature</h1>
         <p>By, Naser Al sabah</p>
     </div>
-
+    <!-- this is a navigation bar for the  home, maps and about me link -->
     <ul>
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="project.html">Home</a></li>
         <li><a href="news.html">News</a></li>
         <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
@@ -30,38 +31,59 @@
             </div>
         </li>
     </ul>
+    <!-- this is for the interactive map container when text is clicked it would move the map to that location -->
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="location-box">
+            <div class="location-card" onclick="goToLocation(-41.2944, 174.7500, 'Zealandia Sanctuary')">.
+                <h4>Zealandia Sanctuary</h4>
+                <p>A beautiful national park in New Zealand that has stunning landscapes and hiking trails.</p>
+            </div>
+        </div>
+        <div class="location-card" onclick="goToLocation(-41.2829, 174.7660, 'Wellington Botanic Garden')">
+            <h4>Wellington Botanic Garden</h4>
+            <p>SHORT DESCRIPTION</p>
+        </div>
+        <div class="location-card" onclick="goToLocation(-41.2673, 174.7586, 'Otari-Wilton\'s Bush')">
+            <h4>Otari-Wilton's Bush</h4>
+            <p>SHORT DESCRIPTION</p>
+        </div>
 
-    <h2>Find a Relaxing Spot Near You</h2>
-    <div id="map"></div>
+        <script>
+            // Initialize the map and set the view
+            var map = L.map('map').setView([-41.289144, 174.777203], 13);
 
-    <script>
-        // Initialize the map and set the view
-        var map = L.map('map').setView([-41.289144, 174.777203], 13);
+            // Add OpenStreetMap tile layer
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                maxZoom: 19
+            }).addTo(map);
 
-        // Add OpenStreetMap tile layer
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+            // Add a marker
+            var marker = L.marker([-41.289144, 174.777203]).addTo(map);
 
-        // Add a marker
-        var marker = L.marker([-41.289144, 174.777203]).addTo(map);
+            // Bind popups to each shape
+            marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+            var popup = L.popup();
 
-        // Bind popups to each shape
-        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-        var popup = L.popup();
+            // Handle map click events to show coordinates in a popup
+            function onMapClick(e) {
+                popup
+                    .setLatLng(e.latlng)
+                    .setContent("You clicked the map at " + e.latlng.toString())
+                    .openOn(map);
+            }
 
-        // Handle map click events to show coordinates in a popup
-        function onMapClick(e) {
-            popup
-                .setLatLng(e.latlng)
-                .setContent("You clicked the map at " + e.latlng.toString())
-                .openOn(map);
-        }
+            map.on('click', onMapClick);
 
-        map.on('click', onMapClick);
-    </script>
-    <h2>Find a Relaxing Spot Near You</h2>
+            function goToLocation(lat, lng, name) {
+                map.setView([lat, lng], 15);
+                L.marker([lat, lng]).addTo(map)
+                    .bindPopup(name)
+                    .openPopup();
+            }
+        </script>
+        <h4>click on green text to see locations on the map</h4>
 
 
 </body>
