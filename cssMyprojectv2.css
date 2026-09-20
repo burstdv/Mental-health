@@ -1,15 +1,17 @@
-/* this is css for bluediv which is the blue header on the top of my website page */
+/* this is css for bluediv which is the green header on the top of my website page */
 .bluediv {
-  background-color: rgba(121, 203, 210, 0.761);
+  background-color: rgba(37, 209, 3, 0.761);
   width: 100%;
   block-size: 115px;
 }
+
 /* this is my file for my background for my whebsite and alos the size and height */
 body {
   background-image: url("background_optimised.jpg");
   height: auto;
   background-size: 120%;
 }
+
 /* This is for my navagation bar specifically dropdown button which is under the blue header and is its color and size */
 .dropbtn {
   background-color: #f18e04;
@@ -18,11 +20,13 @@ body {
   font-size: 16px;
   border: none;
 }
+
 /* this removes default spacing making the layout cleaner */
 body {
   margin: 0;
   padding: 0;
 }
+
 /* this adds space between the heading and paragraph so content is cleaner */
 h2,
 p {
@@ -37,10 +41,12 @@ ul {
   overflow: hidden;
   background-color: #ff840045;
 }
+
 /* this is for the list items in the navigation bar to be placed horizontally */
 li {
   float: left;
 }
+
 /* this is the style of the text of the nav bar links white text and padding with the text in the center */
 li a,
 .dropbtn {
@@ -50,15 +56,18 @@ li a,
   padding: 14px 16px;
   text-decoration: none;
 }
+
 /* this is the effect when hovering on dropdown or home gives red background of text*/
 li a:hover,
 .dropdown:hover .dropbtn {
   background-color: red;
 }
+
 /* Lets the dropdown be in line with other nav items like home page while  containing a hidden dropdown menu inside */
 li.dropdown {
   display: inline-block;
 }
+
 /* this hides the dropdown content by default and is to be placed below the dropdown button */
 .dropdown-content {
   display: none;
@@ -81,16 +90,19 @@ li.dropdown {
 .dropdown-content a:hover {
   background-color: #2fff00;
 }
+
 /* this displays the dropdown menu which is hidden when not hovered */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* this is the size and height of the interactive map  */
+/* this is the size and height of the interactive map and direction right  */
 #map {
   height: 350px;
   width: 35%;
+   margin-left: 850px;
 }
+
 .location-card h4 {
   margin: 0 0 8px 0;
   font-size: 16px;
@@ -103,7 +115,7 @@ li.dropdown {
   color: #4a4a4a;
 }
 
-/* this is for a text box in the about me page and its background color light gray and border green with its height and width with its direction horizontaly  */ 
+/* this is for a text box in the about me page and its background color light gray and border green with its height and width with its direction horizontaly  */
 .box-demo {
   background-color: lightgrey;
   width: 250px;
@@ -111,4 +123,31 @@ li.dropdown {
   padding: 25px;
   margin: 30px;
   margin-left: 650px;
+}
+
+/* this is for the image in the home page and changes its direction and size */
+.side-image {
+  float: right;
+  width: 500px;
+  margin-right: 15px;
+}
+
+/* this is for the image in the about me page the height, size and location */
+.personal-image {
+  float: right;
+  width: 250px;
+  margin-right: 150px;
+  margin-top: -335px;
+}
+.location-box{
+  width: 35%;
+  margin-top: -300px;
+  font-size: 25px;
+}
+.location-box h4{ 
+  font-size: 23px;
+}
+
+.location-box p{ 
+  font-size: 20px;
 }
