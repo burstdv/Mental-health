@@ -7,12 +7,14 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 19
 }).addTo(map);
 
-// Add a marker
+// Add a default marker at the start of the map with a popup and location 
 var marker = L.marker([-41.289144, 174.777203]).addTo(map);
 marker.bindPopup("<b>Relaxing Nature Spot</b><br>A peaceful place to unwind.").openPopup();
 
+// create a reusable popup when the map is clicked 
 var popup = L.popup();
 
+// show the coordinates when the map is clicked 
 function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
@@ -20,8 +22,10 @@ function onMapClick(e) {
         .openOn(map);
 }
 
+// waits till the map is clicked to show the popup with the coordinates of the clicked location
 map.on('click', onMapClick);
 
+// Function to go to a specific location and add a marker with a popup when the card is clicked
 function goToLocation(lat, lng, name) {
     map.setView([lat, lng], 15);
     L.marker([lat, lng]).addTo(map)
