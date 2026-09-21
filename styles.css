@@ -103,12 +103,14 @@ li.dropdown {
    margin-left: 850px;
 }
 
+/* this is the font and margin of the headings location card in maps page  */
 .location-card h4 {
   margin: 0 0 8px 0;
   font-size: 16px;
   color: #1b5e20;
 }
 
+/* this is the font and margin of the paragraphs location card in maps page  */
 .location-card p {
   margin: 8px;
   font-size: 14px;
@@ -139,6 +141,7 @@ li.dropdown {
   margin-right: 150px;
   margin-top: -335px;
 }
+/* this is the text of the location box in the maps page and to change the size and direction */
 .location-box{
   width: 35%;
   margin-top: -300px;
